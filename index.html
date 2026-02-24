@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIX.MOM — Easy Home Repairs Anyone Can Do (No Experience Needed)</title>
+<meta name="description" content="Easy home repair guides anyone can follow. Plumbing, electrical, painting, furniture, appliances, and garden fixes. DIY vs Pro cost calculator. Save thousands per year on home repairs.">
+<meta name="keywords" content="easy home repairs DIY, home fix it guides, DIY plumbing repair, easy electrical fixes, home improvement for beginners, save money home repair, DIY vs hiring a pro, home maintenance tips, mom home repair guide">
+<meta name="author" content="Fix.Mom / Spunk Network">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="theme-color" content="#d4683a">
+<link rel="canonical" href="https://fix.mom">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FIX.MOM — Easy Home Repairs Anyone Can Do">
+<meta property="og:description" content="Easy DIY home repair guides, cost savings calculator, and tool checklists. Save $1,000+ per year doing simple repairs yourself.">
+<meta property="og:url" content="https://fix.mom">
+<meta property="og:site_name" content="Fix.Mom">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FIX.MOM — Easy Home Repairs Anyone Can Do">
+<meta name="twitter:description" content="Easy DIY home repair guides. Save $1,000+ per year doing simple repairs yourself. No experience needed.">
+<meta name="twitter:site" content="@SpunkArt13">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"FIX.MOM","url":"https://fix.mom","description":"Easy home repair guides anyone can follow. DIY vs Pro cost calculator. Save thousands per year.","publisher":{"@type":"Organization","name":"Spunk Network","url":"https://spunk.bet"},"potentialAction":{"@type":"SearchAction","target":"https://fix.mom/?q={search_term}","query-input":"required name=search_term"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I really do home repairs myself with no experience?","acceptedAnswer":{"@type":"Answer","text":"Absolutely! Most common home repairs like fixing a running toilet, patching drywall, unclogging drains, and replacing light fixtures require no special skills. Our step-by-step guides walk you through each repair."}},{"@type":"Question","name":"How much money can I save doing DIY repairs?","acceptedAnswer":{"@type":"Answer","text":"The average homeowner can save $1,000 to $3,000+ per year by handling basic repairs themselves. A plumber charges $150-300 for a simple toilet fix that costs $10-20 in parts."}},{"@type":"Question","name":"What basic tools do I need for home repairs?","acceptedAnswer":{"@type":"Answer","text":"Start with a basic toolkit: screwdriver set, adjustable wrench, pliers, tape measure, hammer, utility knife, level, and a cordless drill. Under $100 total for quality basics."}}]}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#f5f0eb;--surface:#ffffff;--surface2:#faf7f4;--border:#e0d8d0;
+  --text:#2a2520;--muted:#7a7068;--accent:#d4683a;--accent-light:#e87c4f;
+  --accent-glow:rgba(212,104,58,0.15);--green:#2d5a27;--green-light:#3d7a35;
+  --green-bg:rgba(45,90,39,0.08);--blue:#2563eb;--gold:#b8860b;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;-webkit-text-size-adjust:100%;}
+a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(245,240,235,0.97);backdrop-filter:blur(12px);z-index:100;}
+.logo{font-size:1.4rem;font-weight:800;letter-spacing:-0.5px;cursor:pointer;}
+.logo .fix{color:var(--accent);}
+.logo .mom{color:var(--green);}
+.nav-right{display:flex;gap:0.8rem;align-items:center;}
+.nav-link{color:var(--muted);font-size:0.85rem;font-weight:600;transition:color 0.2s;text-decoration:none;}
+.nav-link:hover{color:var(--accent);text-decoration:none;}
+.nav-btn{background:var(--accent);color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.nav-btn:hover{background:var(--accent-light);transform:scale(1.02);text-decoration:none;}
+
+/* Hero */
+.hero{text-align:center;padding:3.5rem 1.5rem 2.5rem;max-width:750px;margin:0 auto;}
+.hero-emoji{font-size:3.5rem;margin-bottom:0.8rem;}
+.hero h1{font-size:2.2rem;font-weight:900;letter-spacing:-1px;margin-bottom:0.6rem;line-height:1.15;color:var(--text);}
+.hero h1 .accent{color:var(--accent);}
+.hero h1 .green{color:var(--green);}
+.hero p{color:var(--muted);font-size:1.05rem;line-height:1.6;max-width:580px;margin:0 auto;}
+.hero-stats{display:flex;gap:2rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;}
+.hero-stat .val{font-size:1.5rem;font-weight:800;color:var(--accent);}
+.hero-stat .label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+
+/* Fix of the Day */
+.fix-of-day{max-width:700px;margin:0 auto 2rem;padding:0 1rem;}
+.fix-card{background:linear-gradient(135deg,var(--green-bg),var(--accent-glow));border:2px solid var(--green);border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;}
+.fix-card .badge{display:inline-block;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;padding:0.25rem 0.6rem;border-radius:6px;margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.5px;}
+.fix-card h3{font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;}
+.fix-card p{color:var(--muted);font-size:0.9rem;line-height:1.5;margin-bottom:0.8rem;}
+.fix-card .savings{font-size:0.85rem;font-weight:700;color:var(--green);}
+.fix-card .difficulty{display:inline-block;font-size:0.7rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;margin-left:0.5rem;}
+.diff-easy{background:rgba(45,90,39,0.1);color:var(--green);}
+.diff-medium{background:rgba(212,104,58,0.1);color:var(--accent);}
+
+/* Categories */
+.categories{max-width:900px;margin:0 auto 2.5rem;padding:0 1rem;}
+.section-title{text-align:center;font-size:1.5rem;font-weight:900;margin-bottom:0.3rem;color:var(--text);}
+.section-title .accent{color:var(--accent);}
+.section-title .green{color:var(--green);}
+.section-sub{text-align:center;color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;}
+.cat-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1rem;text-align:center;transition:all 0.2s;cursor:pointer;}
+.cat-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.06);}
+.cat-card .emoji{font-size:2.5rem;margin-bottom:0.5rem;}
+.cat-card .name{font-weight:700;font-size:0.95rem;margin-bottom:0.2rem;}
+.cat-card .count{font-size:0.75rem;color:var(--muted);}
+.cat-card.active{border-color:var(--accent);background:var(--accent-glow);}
+
+/* Guides grid */
+.guides{max-width:900px;margin:0 auto 2.5rem;padding:0 1rem;display:none;}
+.guides.show{display:block;}
+.guide-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:1rem;}
+.guide-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.2rem;transition:all 0.2s;}
+.guide-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,0.04);}
+.guide-card h4{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem;}
+.guide-card p{font-size:0.8rem;color:var(--muted);line-height:1.4;margin-bottom:0.5rem;}
+.guide-meta{display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap;}
+.guide-tag{font-size:0.65rem;font-weight:700;padding:0.15rem 0.4rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;}
+.tag-easy{background:rgba(45,90,39,0.1);color:var(--green);}
+.tag-medium{background:rgba(212,104,58,0.1);color:var(--accent);}
+.tag-save{background:rgba(184,134,11,0.1);color:var(--gold);}
+.back-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:0.4rem 0.8rem;border-radius:8px;font-size:0.8rem;cursor:pointer;transition:all 0.2s;}
+.back-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* Cost Calculator */
+.calculator{max-width:700px;margin:0 auto 2.5rem;padding:0 1rem;}
+.calc-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;box-shadow:0 2px 15px rgba(0,0,0,0.03);}
+.calc-row{margin-bottom:1rem;}
+.calc-row label{display:block;font-size:0.8rem;font-weight:700;color:var(--muted);margin-bottom:0.3rem;text-transform:uppercase;letter-spacing:0.5px;}
+.calc-select,.calc-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:0.7rem 1rem;font-size:0.95rem;color:var(--text);outline:none;font-family:inherit;}
+.calc-select:focus,.calc-input:focus{border-color:var(--accent);}
+.calc-btn{width:100%;background:var(--accent);color:#fff;border:none;padding:0.8rem;border-radius:10px;font-size:1rem;font-weight:800;cursor:pointer;transition:all 0.2s;}
+.calc-btn:hover{background:var(--accent-light);transform:scale(1.01);}
+.calc-result{display:none;margin-top:1.2rem;background:var(--green-bg);border:1px solid var(--green);border-radius:12px;padding:1.2rem;}
+.calc-result.show{display:block;}
+.result-row{display:flex;justify-content:space-between;padding:0.5rem 0;font-size:0.9rem;}
+.result-row:not(:last-child){border-bottom:1px solid rgba(45,90,39,0.15);}
+.result-row .label{color:var(--muted);}
+.result-row .value{font-weight:700;}
+.result-row .savings{color:var(--green);font-weight:800;font-size:1.1rem;}
+
+/* Tool Checklist */
+.tools-section{max-width:700px;margin:0 auto 2.5rem;padding:0 1rem;}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.8rem;margin-top:1rem;}
+.tool-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.8rem 1rem;display:flex;align-items:center;gap:0.8rem;transition:all 0.2s;cursor:pointer;}
+.tool-item:hover{border-color:var(--accent);}
+.tool-item.checked{background:var(--green-bg);border-color:var(--green);}
+.tool-check{width:22px;height:22px;border:2px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;font-size:0.7rem;}
+.tool-item.checked .tool-check{background:var(--green);border-color:var(--green);color:#fff;}
+.tool-info .name{font-weight:700;font-size:0.85rem;}
+.tool-info .price{font-size:0.7rem;color:var(--muted);}
+.tool-progress{text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--muted);}
+.tool-progress span{color:var(--green);font-weight:700;}
+
+/* Blog preview */
+.blog-section{max-width:800px;margin:0 auto 2.5rem;padding:0 1rem;}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:all 0.2s;}
+.blog-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,0.04);}
+.blog-card .tag{display:inline-block;background:var(--accent-glow);color:var(--accent);font-size:0.7rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:6px;margin-bottom:0.8rem;}
+.blog-card h3{font-size:1.2rem;font-weight:800;margin-bottom:0.4rem;}
+.blog-card .excerpt{color:var(--muted);font-size:0.9rem;line-height:1.5;margin-bottom:1rem;}
+.blog-card .read-more{color:var(--accent);font-weight:700;font-size:0.85rem;}
+
+/* Email signup */
+.signup{max-width:600px;margin:0 auto 2.5rem;padding:0 1rem;}
+.signup-box{background:linear-gradient(135deg,var(--accent-glow),rgba(45,90,39,0.08));border:2px solid var(--accent);border-radius:16px;padding:2rem;text-align:center;}
+.signup-box h3{font-size:1.2rem;font-weight:800;margin-bottom:0.3rem;}
+.signup-box p{color:var(--muted);font-size:0.85rem;margin-bottom:1rem;}
+.signup-form{display:flex;gap:0.5rem;max-width:400px;margin:0 auto;}
+.signup-input{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.7rem 1rem;font-size:0.9rem;color:var(--text);outline:none;}
+.signup-input:focus{border-color:var(--accent);}
+.signup-btn{background:var(--accent);color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.85rem;cursor:pointer;white-space:nowrap;}
+.signup-btn:hover{background:var(--accent-light);}
+.signup-note{font-size:0.7rem;color:var(--muted);margin-top:0.5rem;}
+
+/* Network promo */
+.network-promo{max-width:700px;margin:0 auto 2rem;padding:0 1rem;}
+.promo-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;}
+.promo-card h3{font-size:1.1rem;font-weight:800;margin-bottom:0.3rem;}
+.promo-card p{color:var(--muted);font-size:0.85rem;margin-bottom:1rem;}
+.promo-btn{display:inline-block;background:var(--green);color:#fff;padding:0.6rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all 0.2s;}
+.promo-btn:hover{background:var(--green-light);transform:scale(1.02);text-decoration:none;}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;margin-top:3rem;background:var(--surface2);}
+.footer-brand{font-size:1.1rem;font-weight:800;margin-bottom:0.5rem;}
+.footer-brand .accent{color:var(--accent);}
+.footer-sub{font-size:0.75rem;color:var(--muted);margin-bottom:1rem;}
+.footer-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem;}
+.footer-links a{color:var(--muted);font-size:0.75rem;font-weight:600;text-decoration:none;}
+.footer-links a:hover{color:var(--accent);}
+.footer-network{margin-top:1rem;}
+.footer-network-title{font-size:0.6rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem;}
+.footer-network-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.footer-network-links a{color:var(--muted);font-size:0.65rem;font-weight:600;text-decoration:none;}
+.footer-network-links a:hover{color:var(--accent);}
+
+/* Toast */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--green);color:#fff;padding:0.7rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.85rem;z-index:300;transition:transform 0.3s;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+/* Responsive */
+@media(max-width:640px){
+  nav{padding:0.8rem 1rem;}
+  .logo{font-size:1.1rem;}
+  .nav-link{display:none;}
+  .hero h1{font-size:1.5rem;}
+  .hero p{font-size:0.9rem;}
+  .hero-stats{gap:1rem;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .guide-list{grid-template-columns:1fr;}
+  .tool-grid{grid-template-columns:1fr;}
+  .signup-form{flex-direction:column;}
+  footer{padding:1.5rem 1rem 5rem;}
+}
+@media(max-width:380px){
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:0.6rem;}
+  .cat-card{padding:1rem 0.6rem;}
+  .cat-card .emoji{font-size:2rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="fix">FIX</span>.<span class="mom">MOM</span></div>
+  <div class="nav-right">
+    <a href="#calculator" class="nav-link">Cost Calculator</a>
+    <a href="#tools" class="nav-link">Tool Checklist</a>
+    <a href="#blog" class="nav-link">Blog</a>
+    <a href="https://spunk.codes/?ref=fixmom" target="_blank" rel="noopener" class="nav-btn">Free Tools</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-emoji">🔧🏡</div>
+  <h1><span class="accent">FIX.MOM</span> &mdash; Easy Home Repairs <span class="green">Anyone Can Do</span></h1>
+  <p>No experience needed. Step-by-step guides for every room in your house. See exactly how much you save doing it yourself.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="val">50+</div><div class="label">Repair Guides</div></div>
+    <div class="hero-stat"><div class="val">$2,400</div><div class="label">Avg Annual Savings</div></div>
+    <div class="hero-stat"><div class="val">6</div><div class="label">Categories</div></div>
+  </div>
+</div>
+
+<!-- Fix of the Day -->
+<div class="fix-of-day">
+  <div class="fix-card">
+    <div class="badge">Fix of the Day</div>
+    <h3 id="fotd-title">Fix a Running Toilet</h3>
+    <p id="fotd-desc">A running toilet wastes up to 200 gallons of water per day and $100+ per month. The fix takes 15 minutes and costs under $10 in parts. Remove the tank lid, check the flapper valve, and replace it if worn. Done!</p>
+    <span class="savings" id="fotd-savings">Saves: $150 vs hiring a plumber</span>
+    <span class="difficulty diff-easy" id="fotd-diff">Easy</span>
+  </div>
+</div>
+
+<!-- Categories -->
+<div class="categories">
+  <div class="section-title">Fix-It <span class="accent">Categories</span></div>
+  <div class="section-sub">Pick a category to browse step-by-step guides</div>
+  <div class="cat-grid" id="cat-grid">
+    <div class="cat-card" onclick="showCategory('plumbing')">
+      <div class="emoji">🚿</div>
+      <div class="name">Plumbing</div>
+      <div class="count">12 guides</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('electrical')">
+      <div class="emoji">💡</div>
+      <div class="name">Electrical</div>
+      <div class="count">8 guides</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('painting')">
+      <div class="emoji">🎨</div>
+      <div class="name">Painting</div>
+      <div class="count">7 guides</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('furniture')">
+      <div class="emoji">🪑</div>
+      <div class="name">Furniture</div>
+      <div class="count">9 guides</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('appliances')">
+      <div class="emoji">🧊</div>
+      <div class="name">Appliances</div>
+      <div class="count">8 guides</div>
+    </div>
+    <div class="cat-card" onclick="showCategory('garden')">
+      <div class="emoji">🌿</div>
+      <div class="name">Garden</div>
+      <div class="count">6 guides</div>
+    </div>
+  </div>
+</div>
+
+<!-- Guides Section (shown when category selected) -->
+<div class="guides" id="guides">
+  <button class="back-btn" onclick="hideGuides()">Back to Categories</button>
+  <div class="section-title" id="guides-title" style="margin-top:1rem;">Plumbing</div>
+  <div class="guide-list" id="guide-list"></div>
+</div>
+
+<!-- Cost Calculator -->
+<div class="calculator" id="calculator">
+  <div class="section-title">DIY vs Pro <span class="accent">Cost Calculator</span></div>
+  <div class="section-sub">See exactly how much you save doing it yourself</div>
+  <div class="calc-box">
+    <div class="calc-row">
+      <label>Repair Type</label>
+      <select class="calc-select" id="calc-repair" onchange="calculateSavings()">
+        <option value="">Select a repair...</option>
+        <option value="toilet">Fix Running Toilet</option>
+        <option value="faucet">Replace Leaky Faucet</option>
+        <option value="garbage">Fix Garbage Disposal</option>
+        <option value="drywall">Patch Drywall Hole</option>
+        <option value="outlet">Replace Electrical Outlet</option>
+        <option value="light">Replace Light Fixture</option>
+        <option value="paint_room">Paint a Room</option>
+        <option value="door_handle">Replace Door Handle/Lock</option>
+        <option value="caulk">Re-caulk Bathroom/Kitchen</option>
+        <option value="gutter">Clean & Repair Gutters</option>
+        <option value="thermostat">Install Smart Thermostat</option>
+        <option value="dishwasher">Fix Dishwasher Not Draining</option>
+      </select>
+    </div>
+    <div class="calc-row">
+      <label>Your Zip Code (optional)</label>
+      <input class="calc-input" id="calc-zip" type="text" placeholder="e.g. 90210" maxlength="5">
+    </div>
+    <button class="calc-btn" onclick="calculateSavings()">Calculate Savings</button>
+    <div class="calc-result" id="calc-result">
+      <div class="result-row">
+        <span class="label">Hiring a Pro (avg)</span>
+        <span class="value" id="res-pro">$0</span>
+      </div>
+      <div class="result-row">
+        <span class="label">DIY Cost (parts only)</span>
+        <span class="value" id="res-diy">$0</span>
+      </div>
+      <div class="result-row">
+        <span class="label">Time to Complete</span>
+        <span class="value" id="res-time">-</span>
+      </div>
+      <div class="result-row">
+        <span class="label">Difficulty</span>
+        <span class="value" id="res-diff">-</span>
+      </div>
+      <div class="result-row" style="margin-top:0.5rem;padding-top:0.8rem;border-top:2px solid var(--green);">
+        <span class="label" style="font-weight:700;color:var(--green);">Your Savings</span>
+        <span class="savings" id="res-savings">$0</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tool Checklist -->
+<div class="tools-section" id="tools">
+  <div class="section-title">Essential <span class="green">Tool Checklist</span></div>
+  <div class="section-sub">Everything you need to handle 90% of home repairs (under $100 total)</div>
+  <div class="tool-grid" id="tool-grid"></div>
+  <div class="tool-progress">You have <span id="tool-count">0</span> of <span id="tool-total">0</span> essential tools</div>
+</div>
+
+<!-- Blog Section -->
+<div class="blog-section" id="blog">
+  <div class="section-title">Latest from the <span class="accent">Blog</span></div>
+  <div class="section-sub">Tips, tricks, and money-saving guides</div>
+  <div style="margin-top:1.5rem;">
+    <a href="/blog/10-easy-home-repairs-save-1000.html" style="text-decoration:none;color:inherit;">
+      <div class="blog-card">
+        <div class="tag">Featured</div>
+        <h3>10 Easy Home Repairs That Save $1,000+ Per Year</h3>
+        <div class="excerpt">Stop paying plumbers, electricians, and handymen for repairs you can do yourself in 30 minutes or less. Here are 10 repairs that save the average homeowner over $1,000 annually.</div>
+        <span class="read-more">Read full article &rarr;</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Email Signup -->
+<div class="signup">
+  <div class="signup-box">
+    <h3>Get Weekly Fix-It Tips</h3>
+    <p>One email per week. Quick repairs, money-saving hacks, and seasonal maintenance reminders.</p>
+    <div class="signup-form">
+      <input class="signup-input" id="email-input" type="email" placeholder="your@email.com">
+      <button class="signup-btn" onclick="submitEmail()">Subscribe Free</button>
+    </div>
+    <div class="signup-note">No spam. Unsubscribe anytime.</div>
+  </div>
+</div>
+
+<!-- Network Promo -->
+<div class="network-promo">
+  <div class="promo-card">
+    <h3>Need Digital Tools Too?</h3>
+    <p>300+ free tools for budgeting, savings calculators, AI assistants, and more.</p>
+    <a href="https://spunk.codes/?ref=fixmom" target="_blank" rel="noopener" class="promo-btn">Explore spunk.codes &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand"><span class="accent">FIX</span>.MOM</div>
+  <div class="footer-sub">Easy Home Repairs Anyone Can Do &mdash; No Experience Needed</div>
+  <div class="footer-links">
+    <a href="https://spunk.codes">Spunk.Codes</a>
+    <a href="https://spunk.bet">Spunk.Bet</a>
+    <a href="https://spunkart.com">SpunkArt.com</a>
+    <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener">@SpunkArt13</a>
+  </div>
+  <div class="footer-network">
+    <div class="footer-network-title">Spunk Network</div>
+    <div class="footer-network-links">
+      <a href="https://spunk.bet">spunk.bet</a>
+      <a href="https://spunk.codes">spunk.codes</a>
+      <a href="https://fix.mom" style="color:var(--accent);">fix.mom</a>
+      <a href="https://claw.horse">claw.horse</a>
+      <a href="https://predict.mom">predict.mom</a>
+      <a href="https://predict.horse">predict.horse</a>
+    </div>
+  </div>
+  <div style="margin-top:1rem;display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;">
+    <a href="https://stake.com/?c=MyXSehCn" target="_blank" rel="noopener sponsored" style="color:#1475e1;font-size:0.65rem;font-weight:700;text-decoration:none;">Stake.com</a>
+    <a href="https://coinbase.com/join/YAGES3X?src=referral-link" target="_blank" rel="noopener sponsored" style="color:#0052ff;font-size:0.65rem;font-weight:700;text-decoration:none;">Buy Crypto</a>
+    <a href="https://shop.ledger.com/?r=0553c9ea1441" target="_blank" rel="noopener sponsored" style="color:#ff5500;font-size:0.65rem;font-weight:700;text-decoration:none;">Secure Your Crypto</a>
+    <a href="https://www.amazon.com/?tag=spunk01-20" target="_blank" rel="noopener sponsored" style="color:#ff9900;font-size:0.65rem;font-weight:700;text-decoration:none;">Shop Amazon</a>
+    <a href="https://customgpt.ai/?fpr=spunk" target="_blank" rel="noopener sponsored" style="color:#06b6d4;font-size:0.65rem;font-weight:700;text-decoration:none;">CustomGPT</a>
+  </div>
+  <div style="margin-top:1rem;font-size:0.6rem;color:var(--muted);">&copy; 2025 Fix.Mom &mdash; Part of the <a href="https://spunk.bet" style="color:var(--accent);">Spunk Network</a></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVNL11PEGP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GVNL11PEGP');</script>
+<!-- Clarity -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","pn0x1z2y3w");</script>
+
+<script>
+// ========== GUIDES DATA ==========
+const GUIDES = {
+  plumbing: [
+    { title: 'Fix a Running Toilet', desc: 'Replace the flapper valve in 15 minutes. Most common plumbing fix.', diff: 'Easy', save: '$150' },
+    { title: 'Unclog a Drain (No Chemicals)', desc: 'Use a plunger or drain snake to clear clogs without harsh chemicals.', diff: 'Easy', save: '$125' },
+    { title: 'Replace a Leaky Faucet', desc: 'Swap out cartridges or the whole faucet. 30-minute fix.', diff: 'Easy', save: '$200' },
+    { title: 'Fix a Garbage Disposal', desc: 'Reset button, hex key trick, and when to replace.', diff: 'Easy', save: '$175' },
+    { title: 'Stop a Dripping Showerhead', desc: 'Replace washers or wrap with Teflon tape.', diff: 'Easy', save: '$100' },
+    { title: 'Replace a Toilet Fill Valve', desc: 'Universal fill valve swap. Under $10 in parts.', diff: 'Easy', save: '$150' },
+    { title: 'Fix Low Water Pressure', desc: 'Clean aerators, check valves, and inspect supply lines.', diff: 'Medium', save: '$200' },
+    { title: 'Re-caulk Tub & Shower', desc: 'Remove old caulk, apply new silicone. Prevents water damage.', diff: 'Easy', save: '$120' },
+    { title: 'Repair a Leaky Pipe Joint', desc: 'Tighten fittings or use pipe repair tape/clamp.', diff: 'Medium', save: '$250' },
+    { title: 'Replace a Toilet Wax Ring', desc: 'Fix a toilet that leaks at the base.', diff: 'Medium', save: '$175' },
+    { title: 'Install a Water Shut-Off Valve', desc: 'Know your main shut-off. Add individual fixture valves.', diff: 'Medium', save: '$150' },
+    { title: 'Thaw Frozen Pipes Safely', desc: 'Hair dryer method, heat tape, and prevention tips.', diff: 'Easy', save: '$300' },
+  ],
+  electrical: [
+    { title: 'Replace a Light Switch', desc: 'Turn off breaker, swap the switch. 10-minute fix.', diff: 'Easy', save: '$120' },
+    { title: 'Replace an Electrical Outlet', desc: 'Upgrade old outlets to modern tamper-resistant ones.', diff: 'Easy', save: '$130' },
+    { title: 'Install a Dimmer Switch', desc: 'Same as replacing a switch, but with a dimmer.', diff: 'Easy', save: '$100' },
+    { title: 'Replace a Light Fixture', desc: 'Upgrade ceiling lights, pendants, or vanity lights.', diff: 'Easy', save: '$175' },
+    { title: 'Install a Smart Thermostat', desc: 'Save 10-15% on energy bills. 30-minute install.', diff: 'Easy', save: '$200' },
+    { title: 'Fix a Tripped GFCI Outlet', desc: 'Find and reset GFCI outlets. Common bathroom/kitchen fix.', diff: 'Easy', save: '$100' },
+    { title: 'Replace a Doorbell', desc: 'Upgrade to a smart doorbell or replace a wired one.', diff: 'Medium', save: '$150' },
+    { title: 'Install Under-Cabinet Lighting', desc: 'LED strip lights or puck lights. Great kitchen upgrade.', diff: 'Easy', save: '$200' },
+  ],
+  painting: [
+    { title: 'Paint a Room Like a Pro', desc: 'Prep, prime, cut in, and roll. Perfect results every time.', diff: 'Easy', save: '$400' },
+    { title: 'Fix Peeling Paint', desc: 'Scrape, sand, prime, and repaint. Prevent future peeling.', diff: 'Easy', save: '$200' },
+    { title: 'Patch and Paint Drywall', desc: 'Fill holes, sand smooth, and match existing paint.', diff: 'Easy', save: '$175' },
+    { title: 'Paint Kitchen Cabinets', desc: 'Transform your kitchen for under $100 in paint.', diff: 'Medium', save: '$2,000' },
+    { title: 'Paint a Front Door', desc: 'Huge curb appeal boost. 2 hours, $30 in supplies.', diff: 'Easy', save: '$250' },
+    { title: 'Remove Wallpaper', desc: 'Score, steam, and scrape. Prep for fresh paint.', diff: 'Medium', save: '$300' },
+    { title: 'Stain a Deck', desc: 'Clean, sand, and stain. Extends deck life 5+ years.', diff: 'Easy', save: '$500' },
+  ],
+  furniture: [
+    { title: 'Fix a Wobbly Chair', desc: 'Reglue joints, add braces, or shim legs.', diff: 'Easy', save: '$75' },
+    { title: 'Repair Scratched Wood Furniture', desc: 'Walnuts, markers, wax sticks, and refinishing tips.', diff: 'Easy', save: '$100' },
+    { title: 'Fix a Sagging Couch', desc: 'Replace foam, add plywood support, or fix springs.', diff: 'Easy', save: '$200' },
+    { title: 'Tighten Loose Cabinet Hinges', desc: 'Fill screw holes with toothpicks and reattach.', diff: 'Easy', save: '$60' },
+    { title: 'Replace Drawer Slides', desc: 'Swap old slides for smooth ball-bearing ones.', diff: 'Easy', save: '$100' },
+    { title: 'Fix a Sticky Door', desc: 'Plane, sand, or adjust hinges. 15-minute fix.', diff: 'Easy', save: '$75' },
+    { title: 'Repair a Squeaky Floor', desc: 'Talcum powder, screws from below, or shims.', diff: 'Easy', save: '$150' },
+    { title: 'Refinish a Table Top', desc: 'Strip, sand, stain, and seal. Like-new results.', diff: 'Medium', save: '$300' },
+    { title: 'Fix a Broken Drawer Front', desc: 'Reglue, clamp, and touch up. Save the dresser.', diff: 'Easy', save: '$100' },
+  ],
+  appliances: [
+    { title: 'Fix a Dishwasher Not Draining', desc: 'Clean filter, check drain hose, unclog disposal connection.', diff: 'Easy', save: '$175' },
+    { title: 'Replace a Refrigerator Water Filter', desc: 'Twist out, twist in. 30 seconds.', diff: 'Easy', save: '$50' },
+    { title: 'Fix a Washing Machine That Won\'t Drain', desc: 'Clean pump filter, check drain hose.', diff: 'Easy', save: '$175' },
+    { title: 'Clean Dryer Vent (Fire Prevention)', desc: 'Critical safety maintenance. Brush and vacuum vent line.', diff: 'Easy', save: '$125' },
+    { title: 'Replace Oven Heating Element', desc: 'Unscrew, unplug, plug in new one. 15 minutes.', diff: 'Easy', save: '$200' },
+    { title: 'Fix an Ice Maker', desc: 'Check water line, replace inlet valve, or defrost.', diff: 'Medium', save: '$200' },
+    { title: 'Reset a Garbage Disposal', desc: 'Press the reset button underneath. Try the hex wrench.', diff: 'Easy', save: '$100' },
+    { title: 'Replace Refrigerator Door Gasket', desc: 'Peel off old, press on new. Save on energy bills.', diff: 'Easy', save: '$150' },
+  ],
+  garden: [
+    { title: 'Fix a Leaky Garden Hose', desc: 'Replace washers, cut and splice, or use repair kits.', diff: 'Easy', save: '$40' },
+    { title: 'Repair a Sprinkler Head', desc: 'Dig, unscrew, replace. 10 minutes per head.', diff: 'Easy', save: '$100' },
+    { title: 'Fix a Fence Post', desc: 'Reset with concrete, add braces, or sister a new post.', diff: 'Medium', save: '$200' },
+    { title: 'Patch a Concrete Walkway', desc: 'Clean crack, fill with patching compound, smooth.', diff: 'Easy', save: '$150' },
+    { title: 'Sharpen Lawn Mower Blades', desc: 'Remove blade, file or grind, balance and reinstall.', diff: 'Easy', save: '$50' },
+    { title: 'Build a Raised Garden Bed', desc: 'Cedar boards, screws, and soil. Weekend project.', diff: 'Easy', save: '$200' },
+  ],
+};
+
+// ========== COST CALCULATOR DATA ==========
+const REPAIRS = {
+  toilet: { name: 'Fix Running Toilet', pro: 175, diy: 12, time: '15-30 min', diff: 'Easy' },
+  faucet: { name: 'Replace Leaky Faucet', pro: 250, diy: 35, time: '30-60 min', diff: 'Easy' },
+  garbage: { name: 'Fix Garbage Disposal', pro: 200, diy: 15, time: '15-30 min', diff: 'Easy' },
+  drywall: { name: 'Patch Drywall Hole', pro: 175, diy: 15, time: '30-60 min', diff: 'Easy' },
+  outlet: { name: 'Replace Electrical Outlet', pro: 150, diy: 5, time: '10-20 min', diff: 'Easy' },
+  light: { name: 'Replace Light Fixture', pro: 200, diy: 30, time: '30-45 min', diff: 'Easy' },
+  paint_room: { name: 'Paint a Room (12x12)', pro: 500, diy: 75, time: '4-6 hours', diff: 'Easy' },
+  door_handle: { name: 'Replace Door Handle/Lock', pro: 125, diy: 25, time: '15-30 min', diff: 'Easy' },
+  caulk: { name: 'Re-caulk Bathroom/Kitchen', pro: 150, diy: 10, time: '30-60 min', diff: 'Easy' },
+  gutter: { name: 'Clean & Repair Gutters', pro: 225, diy: 20, time: '2-3 hours', diff: 'Medium' },
+  thermostat: { name: 'Install Smart Thermostat', pro: 250, diy: 50, time: '30-45 min', diff: 'Easy' },
+  dishwasher: { name: 'Fix Dishwasher Not Draining', pro: 200, diy: 10, time: '20-40 min', diff: 'Easy' },
+};
+
+// ========== TOOL CHECKLIST ==========
+const TOOLS = [
+  { name: 'Screwdriver Set (Phillips + Flat)', price: '$8-12' },
+  { name: 'Adjustable Wrench', price: '$8-12' },
+  { name: 'Pliers (Needle-nose + Regular)', price: '$10-15' },
+  { name: 'Tape Measure (25ft)', price: '$5-8' },
+  { name: 'Hammer (16oz)', price: '$8-12' },
+  { name: 'Utility Knife', price: '$5-8' },
+  { name: 'Level (24-inch)', price: '$8-12' },
+  { name: 'Cordless Drill', price: '$30-50' },
+  { name: 'Plunger (toilet + sink)', price: '$8-12' },
+  { name: 'Allen Wrench Set', price: '$5-8' },
+  { name: 'Teflon Tape', price: '$2-3' },
+  { name: 'Duct Tape', price: '$4-6' },
+  { name: 'Stud Finder', price: '$10-15' },
+  { name: 'Flashlight / Headlamp', price: '$8-12' },
+  { name: 'Safety Glasses', price: '$3-5' },
+  { name: 'Work Gloves', price: '$5-8' },
+];
+
+// ========== FIX OF THE DAY ==========
+const DAILY_FIXES = [
+  { title: 'Fix a Running Toilet', desc: 'A running toilet wastes up to 200 gallons of water per day and $100+ per month. The fix takes 15 minutes and costs under $10 in parts. Remove the tank lid, check the flapper valve, and replace it if worn. Done!', savings: 'Saves: $150 vs hiring a plumber', diff: 'Easy' },
+  { title: 'Unclog a Slow Drain', desc: 'Before you call a plumber ($125+), try a plunger, then a drain snake ($8 at any hardware store). Works 90% of the time. Pour boiling water first, then plunge 15-20 times firmly.', savings: 'Saves: $125 vs calling a plumber', diff: 'Easy' },
+  { title: 'Fix a Squeaky Door', desc: 'Spray WD-40 or apply petroleum jelly to the hinge pins. Open and close the door several times. If it still squeaks, remove the pin, clean it, and apply white lithium grease.', savings: 'Saves: $75 vs handyman visit', diff: 'Easy' },
+  { title: 'Patch a Drywall Hole', desc: 'Small holes: fill with spackle, sand smooth, and paint. Larger holes: use a drywall patch kit ($10). Apply the mesh patch, cover with joint compound in thin layers, sand, and paint.', savings: 'Saves: $175 vs hiring someone', diff: 'Easy' },
+  { title: 'Replace a Light Switch', desc: 'Turn off the breaker. Remove the faceplate and old switch (2 screws). Note which wire goes where. Connect wires to new switch. Screw in, replace plate. 10 minutes total.', savings: 'Saves: $120 vs electrician', diff: 'Easy' },
+  { title: 'Fix a Dripping Faucet', desc: 'Usually caused by a worn washer or O-ring. Turn off water supply, remove the handle, replace the washer ($1-2), and reassemble. Stops the annoying drip and saves water.', savings: 'Saves: $150 vs plumber visit', diff: 'Easy' },
+  { title: 'Clean Your Dryer Vent', desc: 'A clogged dryer vent is a fire hazard and wastes energy. Disconnect the vent hose, clean with a vent brush, vacuum out lint buildup. Do this every 6-12 months.', savings: 'Saves: $125 + prevents house fires', diff: 'Easy' },
+];
+
+// ========== FUNCTIONS ==========
+function showCategory(cat) {
+  const guides = GUIDES[cat];
+  if (!guides) return;
+
+  document.getElementById('guides-title').textContent = cat.charAt(0).toUpperCase() + cat.slice(1) + ' Guides';
+  const list = document.getElementById('guide-list');
+  list.innerHTML = guides.map(g =>
+    '<div class="guide-card"><h4>' + g.title + '</h4><p>' + g.desc + '</p><div class="guide-meta">' +
+    '<span class="guide-tag ' + (g.diff === 'Easy' ? 'tag-easy' : 'tag-medium') + '">' + g.diff + '</span>' +
+    '<span class="guide-tag tag-save">Save ' + g.save + '</span></div></div>'
+  ).join('');
+
+  document.getElementById('guides').classList.add('show');
+  document.getElementById('guides').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Highlight active category
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+
+  if (typeof gtag === 'function') gtag('event', 'view_category', { category: cat });
+}
+
+function hideGuides() {
+  document.getElementById('guides').classList.remove('show');
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+}
+
+function calculateSavings() {
+  const repair = document.getElementById('calc-repair').value;
+  if (!repair) return;
+
+  const data = REPAIRS[repair];
+  if (!data) return;
+
+  // Slight zip code variation (cosmetic)
+  const zip = document.getElementById('calc-zip').value;
+  let multiplier = 1;
+  if (zip && zip.length === 5) {
+    const first2 = parseInt(zip.substring(0, 2));
+    if (first2 >= 90) multiplier = 1.35; // CA, West Coast
+    else if (first2 >= 10 && first2 <= 14) multiplier = 1.25; // NY area
+    else if (first2 >= 60 && first2 <= 62) multiplier = 1.15; // Chicago
+    else if (first2 >= 30 && first2 <= 39) multiplier = 0.9; // Southeast
+    else if (first2 >= 70 && first2 <= 79) multiplier = 0.85; // South/midwest
+  }
+
+  const proCost = Math.round(data.pro * multiplier);
+  const diyCost = data.diy;
+  const savings = proCost - diyCost;
+
+  document.getElementById('res-pro').textContent = '$' + proCost;
+  document.getElementById('res-diy').textContent = '$' + diyCost;
+  document.getElementById('res-time').textContent = data.time;
+  document.getElementById('res-diff').textContent = data.diff;
+  document.getElementById('res-savings').textContent = '$' + savings;
+  document.getElementById('calc-result').classList.add('show');
+
+  if (typeof gtag === 'function') gtag('event', 'calculate_savings', { repair: repair, savings: savings });
+}
+
+function initToolChecklist() {
+  const grid = document.getElementById('tool-grid');
+  const checked = JSON.parse(localStorage.getItem('fixmom_tools') || '[]');
+
+  grid.innerHTML = TOOLS.map((t, i) => {
+    const isChecked = checked.includes(i);
+    return '<div class="tool-item ' + (isChecked ? 'checked' : '') + '" onclick="toggleTool(' + i + ', this)">' +
+      '<div class="tool-check">' + (isChecked ? '&#10003;' : '') + '</div>' +
+      '<div class="tool-info"><div class="name">' + t.name + '</div><div class="price">' + t.price + '</div></div></div>';
+  }).join('');
+
+  document.getElementById('tool-total').textContent = TOOLS.length;
+  document.getElementById('tool-count').textContent = checked.length;
+}
+
+function toggleTool(index, el) {
+  let checked = JSON.parse(localStorage.getItem('fixmom_tools') || '[]');
+  if (checked.includes(index)) {
+    checked = checked.filter(i => i !== index);
+    el.classList.remove('checked');
+    el.querySelector('.tool-check').innerHTML = '';
+  } else {
+    checked.push(index);
+    el.classList.add('checked');
+    el.querySelector('.tool-check').innerHTML = '&#10003;';
+  }
+  localStorage.setItem('fixmom_tools', JSON.stringify(checked));
+  document.getElementById('tool-count').textContent = checked.length;
+}
+
+function initFixOfDay() {
+  const day = new Date().getDay();
+  const fix = DAILY_FIXES[day % DAILY_FIXES.length];
+  document.getElementById('fotd-title').textContent = fix.title;
+  document.getElementById('fotd-desc').textContent = fix.desc;
+  document.getElementById('fotd-savings').textContent = fix.savings;
+  document.getElementById('fotd-diff').textContent = fix.diff;
+  document.getElementById('fotd-diff').className = 'difficulty ' + (fix.diff === 'Easy' ? 'diff-easy' : 'diff-medium');
+}
+
+function submitEmail() {
+  const email = document.getElementById('email-input').value;
+  if (!email || !email.includes('@')) {
+    showToast('Please enter a valid email address');
+    return;
+  }
+  // Store locally (no backend yet)
+  const subs = JSON.parse(localStorage.getItem('fixmom_subs') || '[]');
+  subs.push({ email: email, date: new Date().toISOString() });
+  localStorage.setItem('fixmom_subs', JSON.stringify(subs));
+  document.getElementById('email-input').value = '';
+  showToast('Subscribed! Watch for your first tip.');
+  if (typeof gtag === 'function') gtag('event', 'email_signup', { source: 'fix_mom' });
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// Referral system
+(function(){
+  var p = new URLSearchParams(location.search);
+  var ref = p.get('ref') || p.get('r');
+  if (ref && /^[a-zA-Z0-9]{3,64}$/.test(ref)) {
+    if (!localStorage.getItem('fixmom_ref')) localStorage.setItem('fixmom_ref', ref);
+    if (typeof gtag === 'function') gtag('event', 'referral_visit', { referral_code: ref, source: 'fix_mom' });
+    history.replaceState({}, '', location.pathname);
+  }
+})();
+
+// Init
+initFixOfDay();
+initToolChecklist();
+
+// Heartbeat
+setInterval(function(){
+  if (typeof gtag === 'function') gtag('event', 'heartbeat', { source: 'fix_mom' });
+}, 10000);
+</script>
+
+<!-- Spunk Network Scripts -->
+<script src="https://spunk.codes/heartbeat.js" defer></script>
+<script src="https://spunk.codes/universal-referral.js" defer></script>
+<script src="https://spunkart.com/promo.js" data-sa-topbar="true" data-sa-footer="true" defer></script>
+<script src="https://spunk.codes/cross-promo.js" defer></script>
+
+</body>
+</html>
